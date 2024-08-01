@@ -6,6 +6,14 @@ Discover 2D programming and the psychedelic universe of fractals in this project
 </p>
 
 <p align="center">
+  <img src="https://github.com/lh-lena/42_fractol/blob/main/image/mandelbrot-colorful-3-part.png" alt="Fract-ol colourful Mandelbrot by ohladkov" width="500">
+</p>
+
+<p align="center">
+  <img src="https://github.com/lh-lena/42_fractol/blob/main/image/mandelbrot-colorful-1.png" alt="Fract-ol colourful Mandelbrot by ohladkov" width="500">
+</p>
+
+<p align="center">
   <img src="https://github.com/lh-lena/42_fractol/blob/main/image/julia-mono-color-blue-part.png" alt="Fract-ol mono-colored Julia by ohladkov" width="500">
 </p>
 
