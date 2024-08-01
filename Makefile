@@ -6,36 +6,44 @@
 #    By: ohladkov <ohladkov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/15 18:20:36 by ohladkov          #+#    #+#              #
-#    Updated: 2023/11/13 19:42:52 by ohladkov         ###   ########.fr        #
+#    Updated: 2024/08/01 12:50:56 by ohladkov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= fractol
 
-SRCS	= fractol.c exit_fractal.c hook_key.c str_utils.c draw.c mandelbrot_set.c julia_set.c fractal_init.c
+SRCS	=	main.c exit_fractal.c hook_key.c str_utils.c draw.c \
+			mandelbrot_set.c julia_set.c fractal_init.c
 
 OBJS	= $(SRCS:.c=.o)
 
-DEPS	= /usr/local/include/mlx.h
-LIBS	= /usr/local/lib/libmlx.a
+MLX_PATH	= minilibx-linux
+MLX_NAME 	= libmlx.a
+MLX			= $(MLX_PATH)/$(MLX_NAME)
 
-CC		= cc
+CC			= cc
+HEAD		= $(MLX_PATH)/libmlx.h
 
-CFLAGS	= -Wall -Wextra -Werror
-LFLAGS	= -lX11 -lXext -lmlx -lm
+CFLAGS	= -Wall -Wextra -Werror -O3
+
+LFLAGS	= -lX11 -lXext -lm
 
 all:		$(NAME)
 
-$(NAME):	$(OBJS)
-		$(CC) $(LFLAGS) $(CFLAGS) -o $(NAME) $(OBJS) $(LIBS)
+$(NAME):	$(OBJS) $(LIBFT) $(MLX)
+		$(CC) $(LFLAGS) $(CFLAGS) $(OBJS) $(MLX) -o $(NAME) 
 
-%.o: %.c	$(DEPS)
+$(MLX):
+	@make -sC $(MLX_PATH)
+
+
+%.o: %.c Makefile
 		$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
-		rm -f *.o
+	rm -f $(OBJS)
 
 fclean:		clean
-		rm -f $(NAME)
+	rm -f $(NAME)
 
 re:		fclean all
