@@ -1,8 +1,9 @@
 # 42_fractol
 Discover 2D programming and the psychedelic universe of fractals in this project, using minilibX
 
-![Fract-ol mono-colored Mandelbrot by ohladkov](https://github.com/lh-lena/42_fractol/blob/main/image/mandelbrot-mono-color-blue-part.png)
+<img src="https://github.com/lh-lena/42_fractol/blob/main/image/mandelbrot-mono-color-blue-part.png" alt="Fract-ol mono-colored Mandelbrot by ohladkov" width="500">
 
-![Fract-ol mono-colored Julia by ohladkov](https://github.com/lh-lena/42_fractol/blob/main/image/julia-mono-color-blue-part.png)
+<img src="https://github.com/lh-lena/42_fractol/blob/main/image/julia-mono-color-blue-part.png" alt="Fract-ol mono-colored Julia by ohladkov" width="500">
+
 
 
